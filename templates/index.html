@@ -33,6 +33,28 @@
 	<!-- bxSlider CSS file -->
 	<link href="../static/css/jquery.bxslider.css" rel="stylesheet" />
     
+    <script type="text/javascript" src="../static/tinymce/tinymce.min.js"></script>
+    
+    <script type="text/javascript">
+tinymce.init({
+    selector: "#txtarea",
+    theme: "modern",
+    plugins: [
+        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons template paste textcolor colorpicker textpattern"
+    ],
+    toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+    toolbar2: "print preview media | forecolor backcolor emoticons",
+    image_advtab: true,
+    templates: [
+        {title: 'Test template 1', content: 'Test 1'},
+        {title: 'Test template 2', content: 'Test 2'}
+    ]
+});
+</script>
+    
     <style type="text/css">
 	#lean_overlay {
     position: fixed;
@@ -117,7 +139,7 @@
                     	<a href="#divDocuments">Documentation</a>
                     </li>
                     <li>
-                    	<a href="#divLearn">Learn</a>
+                    	<a href="#lastDiv">Learn</a>
                     </li>
                     <li>
                     	<a href="#divContact">Reach Us</a>
@@ -132,14 +154,16 @@
                
             </nav>
             
- <div class="divHome" id="divHome">
+<div class="divHome" id="divHome">
 	 <ul class="bxslider">
   		<li><img src="../static/images/01.jpg" /></li>
 		<li><img src="../static/images/0201.jpg" /></li>
 		<li><img src="../static/images/0301.jpg" /></li>
         <li><iframe src="http://player.vimeo.com/video/17914974" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
 	 </ul>
- </div>
+</div>
+ 
+  <div class="divNext" id="divNext"> <img src="../static/images/pmo_lifecycle.png">  </div>
  
 <div class="projectUpdate">
  
@@ -161,16 +185,53 @@
   
    	</form>
     
+</div>
+   
+    <div class="lastDiv" id="lastDiv">
+    	<form method="post">
+    		<textarea id="txtarea" name="content" style="width:100%"></textarea>
+    
+    		<input type="button" name="Submit" value="Submit" style="width: 100px; vertical-align:middle; float:none; display: 		table-cell"/>
+    
+		</form>
     </div>
-    <div class="divNext" id="divNext"> <img src="../static/images/pmo_lifecycle.png">  </div>
-    <div class="lastDiv"></div>
+    
+    <div class="end"></div>
+    
     <div class="lean_overlay" rel="leanModal"></div>
     
     <div class="footer">
     
-    
-													
-								<ul class="social">
+    <img src="../static/images/mhrd-logo.png" style="position: absolute; margin: 0 auto;
+       top:0px; left: 50px; width: 80px; height: 60px;">
+    				
+    <img src="../static/images/nmeict-logo.png" style="position: absolute; margin: 0 auto;
+       top:0px; right: 50px; width: 80px; height: 60px;">
+								
+    <div class="col-lg-4" id="social" style="z-index:2">
+		
+        <div id="social-icons">
+       
+        <a href="https://github.com/" target="_blank">
+          <img src="../static/images/github-white.png" style="position: absolute; top:-20px; left: 560px; width: 48px; height: 48px;" alt="github">
+        </a>
+        <a href="https://plus.google.com/">
+          <img src="../static/images/googleplus.png" style="position: absolute; margin: 0 auto;
+       top:-20px; left: 620px; width: 48px; height: 48px; " alt="googleplus">
+        </a>
+        <a href="#">
+          <img src="../static/images/facebook.png" style="position: absolute; margin: 0 auto;
+       top:-20px; left: 680px; width: 48px; height: 48px; " alt="facebook">
+        </a>
+        <a href="#" target="_blank">
+          <img src="../static/images/youtube.png" style="position: absolute; margin: 0 auto;
+       top:-20px; left: 740px; width: 48px; height: 48px; " alt="youtube">
+        </a>
+        
+		</div>
+    </div>      
+                                					
+							<!--	<ul class="social">
 									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
@@ -188,9 +249,8 @@
 									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
 									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
 									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-									-->
-                                                                        
-								</ul>
+									--        
+								</ul> -->
 							
 							</div>
 				    </div>
